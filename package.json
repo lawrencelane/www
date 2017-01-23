@@ -1,0 +1,30 @@
+{
+  "name": "keystone_app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "^1.5.0",
+    "dotenv": "^2.0.0",
+    "keystone": "latest",
+    "lodash": "^4.13.1",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.37",
+    "eslint": "^2.12.0",
+    "eslint-config-keystone": "^2.3.1",
+    "eslint-plugin-react": "^5.1.1",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "clean": "rm -rf ./routes && rm -rf ./models",
+    "dist_clean": "rm -rf ./node_modules && npm run clean",
+    "build_views": "./node_modules/.bin/tsc -p src/views",
+    "build_models": "./node_modules/.bin/tsc -p src/models",
+    "build_index": "./node_modules/.bin/tsc -p src/",
+    "build": "npm run build_index && npm run build_views && npm run build_models",
+    "start": "node keystone.js"
+  }
+}
