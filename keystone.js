@@ -9,9 +9,12 @@ var keystone = require("keystone");
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 
+const brand = "lawrencelane"
+
 keystone.init({
-    "name": "keystone_app",
-    "brand": "keystone_app",
+    "name": brand,
+    "brand": brand,
+    "title": brand,
 
     "less": "public",
     "static": "public",
@@ -36,6 +39,8 @@ keystone.set("locals", {
     env: keystone.get("env"),
     utils: keystone.utils,
     editable: keystone.content.editable,
+    brand: brand,
+    title: brand,
 });
 
 // Load your project's Routes
