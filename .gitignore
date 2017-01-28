@@ -36,3 +36,4 @@ node_modules
 # compiled output
 routes/
 models/
+public/js/

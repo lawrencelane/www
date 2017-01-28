@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "../../public/js/"
+    },
+    "include": [
+        "./"
+    ],
+    "exclude": [
+        "node_modules",
+        "./models",
+        "./views"
+    ]
+}

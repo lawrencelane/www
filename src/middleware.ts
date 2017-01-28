@@ -12,14 +12,14 @@ const initLocals = (req, res, next) => {
 };
 
 const flashMessages = (req, res, next) => {
-    const flashMessages = {
+    const flashMsgs = {
         error: req.flash("error"),
         info: req.flash("info"),
         success: req.flash("success"),
         warning: req.flash("warning"),
     };
-    res.locals.messages = _.some(flashMessages, (msgs) => { return msgs.length; })
-        ? flashMessages : false;
+    res.locals.messages = _.some(flashMsgs, (msgs) => { return msgs.length; })
+        ? flashMsgs : false;
     next();
 };
 
